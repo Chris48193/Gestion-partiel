@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Partiel } from './partiel.model';
+import { PartielsService } from './partiels.service';
 
 @Component({
   selector: 'app-partiels',
@@ -7,7 +9,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PartielsComponent implements OnInit {
 
-  constructor() { }
+  partielCourant: Partiel = this.partielsService.partielCourant;
+
+  constructor(private partielsService: PartielsService) { }
+
+
 
   ngOnInit(): void {
   }
